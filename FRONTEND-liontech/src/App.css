@@ -1,0 +1,55 @@
+img.logoUmssCss {
+    margin: -9vw 0 0 5%;
+    height: 12.3vw;
+}
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+.portada-logo{
+    position:absolute;
+    height:200px;
+
+}
+.portada-icono{
+    position:absolute;
+    height:200px;
+    left : 500px;
+
+}
+.portada{
+  padding-top: 0px;
+  height: 250px;
+  width:;
+}
+
+.textos{
+    padding-top:0;
+    text-align: center;
+   
+
+}
+.avisos{
+        overflow-x: hidden;
+}
+.card{
+    
+    border:black 2px solid;
+    padding-bottom: 100px;
+    padding-left: 10px;
+  }
+  .pie{
+   margin-top: 0px;
+   background-color: aquamarine;
+   
+  }
+  .navg a{
+      color:black;
+      background-color:#007BDC;
+      font-size:23px;
+      padding:10px 130px;
+      text-align:center;
+      text-transform: uppercase;
+
+  }
+  
