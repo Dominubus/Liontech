@@ -18,6 +18,7 @@ use Illuminate\Support\Facades\Hash;
 use PDF;
 use Response;
 
+
 class MainController extends Controller
 {
     function index(){
