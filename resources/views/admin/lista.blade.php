@@ -137,7 +137,6 @@ La gestión seleccionada no tiene grupo empresas registradas.
                   
                   <th class="text-center" border="1">Nombre corto</th>
                   <th class="text-center" border="1">Nombre Largo</th>
-                  <th class="text-center" border="1">Gestión</th>
                   <th class="text-center" border="1">Docente</th>
                 </thead>
                 <tbody>
@@ -152,9 +151,6 @@ La gestión seleccionada no tiene grupo empresas registradas.
                       </td>
                       <td align="center">
                           {{$item->nombreL}}                                
-                      </td>
-                      <td align="center">
-                        {{$item->gestion_emp}}                                
                       </td>
             
                       <td align="center">
