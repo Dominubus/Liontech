@@ -136,4 +136,6 @@ Route::group(['middleware'=>['AuthCheck']], function(){
 
     Route::get('/docente/avisosD/{avisos}',[AvisosController::class, 'editAvisos'])->name('avisos.edit');
     Route::put('/docente/avisosD/{avisos}',[AvisosController::class, 'updateAvisos'])->name('avisos.update');
+
+   Route::get('/admin/estudiantes',[MainController::class, 'AdminEstudiantes'])->name('admin.estudiantes');
 });

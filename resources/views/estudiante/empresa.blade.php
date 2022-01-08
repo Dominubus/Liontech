@@ -5,7 +5,7 @@
         <div class="container mt-5 formulario">
           <div class="formCyA ">
             <h1 Style="text-align: center;">EMPRESA</h1>
-            <div   >
+            <div>
             @if(Session::get('success'))
              <div class="alert alert-success">
                 {{ Session::get('success') }}
@@ -85,51 +85,8 @@
           </div>
           @endforeach
           </form>
-          <form method="post" action="{{ route('estudiante.orden') }}" enctype="multipart/form-data">            
-            @if(Session::get('fail5'))
-             <div class="alert alert-danger">
-                {{ Session::get('fail5') }}
-             </div>
-            @endif
-            @csrf              
-              
-            <div class="col-md-6 ">
-            <div class=" " >
-               <button type="submit"  name="orden" value="Submit" class="btn btn-primary" style="background-color: #215f88;">Ver orden de cambio</button>
-               
-             </div>
-            </div>
-          </form>
-          <form method="post" action="{{ route('ver.contrato2') }}" enctype="multipart/form-data">            
-            @if(Session::get('fail4'))
-             <div class="alert alert-danger">
-                {{ Session::get('fail4') }}
-             </div>
-            @endif
-            @csrf              
-              
-            <div class="col-md-6 ">
-            <div class=" " >
-               <button type="submit"  name="contrato" value="Submit" class="btn btn-primary" style="background-color: #215f88;">Ver contrato</button>
-               
-             </div>
-            </div>
-          </form>
-          <form method="post" action="{{ route('descarga.contrato') }}" enctype="multipart/form-data">            
-            @if(Session::get('fail11'))
-             <div class="alert alert-danger">
-                {{ Session::get('fail11') }}
-             </div>
-            @endif
-            @csrf              
-              
-            <div class="col-md-6 ">
-            <div class=" " >
-               <button type="submit"  name="contrato" value="Submit" class="btn btn-primary" style="background-color: #215f88;">Descargar contrato</button>
-               
-             </div>
-            </div>
-          </form>
+        
+          <div class="table ">
           <form method="post" action="{{ route('estudiante.contratoD') }}" accept=".pdf" enctype="multipart/form-data">            
             @if(Session::get('success1'))
              <div class="alert alert-success">
@@ -236,13 +193,13 @@
 
          
             <div class=" " >
-               <button type="submit"  name="submit_trabajo" value="Submit" class="btn btn-primary" style="background-color: #215f88;">Subir</button>
+               <button type="submit"  name="submit_trabajo" value="Submit" class="btn btn-primary" style="background-color: #215f88;margin-right:25px;">Subir</button>
                
              
              </div>
             </div>
          </form>
-         <form method="post" action="{{ route('empresa.pagos') }}" accept=".pdf" enctype="multipart/form-data">
+         <f rm method="post" action="{{ route('empresa.pagos') }}" accept=".pdf" enctype="multipart/form-data">
             @csrf              
             @if(Session::get('success5'))
              <div class="alert alert-success">
@@ -254,7 +211,7 @@
                 {{ Session::get('fail10') }}
              </div>
             @endif
-            <div class="d-flex justify-content-evenly" style="margin-top:50px;">
+            <div class="d-flex justify-content-evenly" style="margin-top:50px;margin-right:20px;">
               <div>
                     <label for="pagos" class="form-label">Plan de pagos</label>
                     <input type="file" name="pagos"/>
@@ -269,6 +226,62 @@
              </div>
             </div>
          </form>
+        </div>
+        <section>
+          <h1 class="text-center">Documentos</h1>
+           <div class="card">
+          <div class="row">
+         
+     
+          <form method="post" action="{{ route('estudiante.orden') }}" enctype="multipart/form-data">            
+            @if(Session::get('fail5'))
+             <div class="alert alert-danger">
+                {{ Session::get('fail5') }}
+             </div>
+            @endif
+            @csrf              
+              
+            <div class="col-md-6 ">
+            <div class=" " >
+               <button type="submit"  name="orden" value="Submit" class="btn btn-primary" style="background-color: #215f88;">Ver orden de cambio</button>
+               
+             </div>
+            </div>
+          </form>
+          <form method="post" action="{{ route('ver.contrato2') }}" enctype="multipart/form-data">            
+            @if(Session::get('fail4'))
+             <div class="alert alert-danger">
+                {{ Session::get('fail4') }}
+             </div>
+            @endif
+            @csrf              
+              
+            <div class="col-md-6 ">
+            <div class=" " >
+               <button type="submit"  name="contrato" value="Submit" class="btn btn-primary" style="background-color: #215f88;">Ver contrato</button>
+               
+             </div>
+            </div>
+          </form>
+          <form method="post" action="{{ route('descarga.contrato') }}" enctype="multipart/form-data">            
+            @if(Session::get('fail11'))
+             <div class="alert alert-danger">
+                {{ Session::get('fail11') }}
+             </div>
+            @endif
+            @csrf              
+              
+            <div class="col-md-6 ">
+            <div class=" " >
+               <button type="submit"  name="contrato" value="Submit" class="btn btn-primary" style="background-color: #215f88;">Descargar contrato</button>
+               
+             </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      </section>  
+          
         </div>
       
       </div>

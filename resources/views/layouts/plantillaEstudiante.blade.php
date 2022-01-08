@@ -33,8 +33,9 @@
             @endforeach
           </a></li> 
           <li><a class="far fa-bell" href="{{ url('/notificaciones') }}">
-            <span class="fa fa-comment"></span>
-            <span class="num">@if(count($notificaciones)>0) {{count($notificaciones)}} @endif
+            
+              @if(count($notificaciones)>0)  <span class="fa fa-comment"></span>
+              <span class="num"> {{count($notificaciones)}} @endif
             
             </span>
           </a></li>

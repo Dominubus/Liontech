@@ -973,6 +973,15 @@ class MainController extends Controller
 
         return view('/admin/docentes', compact('data'),['usuarios' => $log]);
     }
+    function AdminEstudiantes(Request $request)
+    {
+        $log = ['LoggedUserInfo' => Usuario::where('id', '=', session('LoggedUser'))->first()];
+        $query = DB::table('usuarios')->where('tipo', '=', '3');
+        $data = $query->get();
+        return view('/admin/estudiantes', compact('data'),['usuarios' => $log]);
+    }
+
+
     /*
     function settings(){
         $data = ['LoggedUserInfo'=>Usuario::where('id','=', session('LoggedUser'))->first()];
